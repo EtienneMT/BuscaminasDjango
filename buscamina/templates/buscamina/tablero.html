@@ -1,0 +1,19 @@
+<!-- tablero.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tablero del Buscaminas</title>
+</head>
+<body>
+    <h1>Tablero del Buscaminas</h1>
+    <table border="1" >
+        {% for fila in tablero %}
+            <tr>
+                {% for celda in fila %}
+                    <td style="width: 10px; height: 10px">{{ celda }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
