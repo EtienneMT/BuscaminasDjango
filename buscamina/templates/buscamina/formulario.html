@@ -1,10 +1,6 @@
-<!-- formulario.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Formulario del Buscaminas</title>
-</head>
-<body>
+{% extends 'buscamina/base.html' %}
+
+{% block content %}
     <h1>Formulario del Buscaminas</h1>
     <form method="post">
         {% csrf_token %}
@@ -14,12 +10,13 @@
             {{ form.filas }}
             {{ form.filas.errors }}
         </div>
+        <br>
         <div class="form-group">
             {{ form.columnas.label_tag }}
             {{ form.columnas }}
             {{ form.columnas.errors }}
         </div>
+        <br>
         <button type="submit">Crear Tablero</button>
     </form>
-</body>
-</html>
+{% endblock %}
