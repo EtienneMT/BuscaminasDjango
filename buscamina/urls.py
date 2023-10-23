@@ -2,5 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.tablero, name='formulario'),
+    path('', views.index, name='index'),
+    path('crear_tablero', views.tablero, name='formulario'),
 ]

@@ -5,9 +5,11 @@
     <title>Formulario del Buscaminas</title>
 </head>
 <body>
+    <h2>
+        <a href="{% url 'index' %}">Principal</a>
+    </h2>
     <h1>Formulario del Buscaminas</h1>
-    <form method="post">
-        {% csrf_token %}
+    <form method="get">
         {{ form.non_field_errors }}
         <div class="form-group">
             {{ form.filas.label_tag }}
