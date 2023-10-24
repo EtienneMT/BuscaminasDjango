@@ -1,13 +1,6 @@
-<!-- tablero.html -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Tablero del Buscaminas</title>
-</head>
-<body>
-    <h2>
-        <a href="{% url 'index' %}">Principal</a>
-    </h2>
+{% extends 'buscamina/buscamina.html' %}
+
+{% block content %}
     <h1>Tablero del Buscaminas</h1>
     <table>
         {% for fila in tablero %}
@@ -18,5 +11,4 @@
             </tr>
         {% endfor %}
     </table>
-</body>
-</html>
+{% endblock %}

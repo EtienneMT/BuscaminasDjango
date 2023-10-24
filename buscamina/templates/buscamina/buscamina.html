@@ -4,14 +4,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Index</title>
+    <title>Buscaminas</title>
     <link rel="stylesheet" href="{% static 'css/buscamina.css' %}">
 </head>
 <body>
 <header>
     <h2>
-        <a href="{% url 'formulario' %}">Buscaminas</a>
+        <a href="{% url 'index' %}">Principal</a>
     </h2>
 </header>
+<main>
+    {% block content %}
+
+    {% endblock %}
+</main>
+
 </body>
 </html>
